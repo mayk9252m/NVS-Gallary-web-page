@@ -1,0 +1,14 @@
+{
+  "events": [
+    {
+      "id": "annual-day",
+      "photos": ["p1.jpg", "p2.jpg"],
+      "videos": ["v1.mp4"]
+    },
+    {
+      "id": "sports-day",
+      "photos": ["p3.jpg"],
+      "videos": []
+    }
+  ]
+}

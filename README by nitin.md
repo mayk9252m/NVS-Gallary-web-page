@@ -1,1 +1,0 @@
-# NVS-Gallary-web-page
