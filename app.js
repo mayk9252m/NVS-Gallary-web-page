@@ -3,6 +3,11 @@ function openEvent(eventName) {
   window.location.href = "event.html";
 }
 
+function openEvent(vishalgarhTour) {
+  localStorage.setItem("event", vishalgarhTour);
+  window.location.href = "event/vishalgarh tour.html";
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   const title = document.getElementById("eventTitle");
   if (title) {
@@ -36,7 +41,7 @@ function downloadImage(imagePath) {
 }
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
-  downloadImage("images/logo.png");
+  downloadImage("logo/logo.png");
 });
 
 
