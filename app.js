@@ -5,7 +5,7 @@ function openEvent(eventName) {
 
 function openEvent(vishalgarhTour) {
   localStorage.setItem("event", vishalgarhTour);
-  window.location.href = "event/vishalgarh tour.html";
+  window.location.href = "event/Vishalgarh-tour/vishalgarh-tour.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -15,12 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+function openVishalgarhPhotos() {
+  window.location.href = "./event/Vishalgarh-tour/Vishalgarh-photos.html";
+}
+
 function openPhotos() {
-  window.location.href = "photos.html";
+  window.location.href = "/photos.html";
 }
 
 function openVideos() {
-  window.location.href = "videos.html";
+  window.location.href = "/videos.html";
 }
 
 // function downloadImage(btn) {
@@ -41,7 +45,7 @@ function downloadImage(imagePath) {
 }
 
 document.getElementById("downloadBtn").addEventListener("click", () => {
-  downloadImage("logo/logo.png");
+  downloadImage("/images/logo.png");
 });
 
 
