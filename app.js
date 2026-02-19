@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function openVishalgarhPhotos() {
-  window.location.href = "./event/Vishalgarh-tour/Vishalgarh-photos.html";
+  window.location.href = "/event/Vishalgarh-tour/photos.html";
 }
 
 function openPhotos() {
