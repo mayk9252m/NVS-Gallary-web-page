@@ -183,3 +183,4 @@ header {
 .button:hover:before {
   bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
 }
+

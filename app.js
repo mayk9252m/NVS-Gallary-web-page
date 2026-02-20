@@ -3,17 +3,16 @@ function openEvent(eventName) {
   window.location.href = "event.html";
 }
 
-function openEvent(vishalgarhTour) {
-  localStorage.setItem("event", vishalgarhTour);
-  window.location.href = "event/Vishalgarh-tour/vishalgarh-tour.html";
+function openAnnualDay(AnnualDay) {
+  localStorage.setItem("Annual Day", AnnualDay);
+  window.location.href = "event/Annual Day/event.html";
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const title = document.getElementById("eventTitle");
-  if (title) {
-    title.innerText = localStorage.getItem("event").replace("-", " ");
-  }
-});
+
+function openvishalgarhTour(vishalgarhTour) {
+  localStorage.setItem("vishalgarhTour", vishalgarhTour);
+  window.location.href = "event/Vishalgarh-tour/event.html";
+}
 
 function openVishalgarhPhotos() {
   window.location.href = "/event/Vishalgarh-tour/photos.html";
@@ -52,3 +51,20 @@ document.getElementById("downloadBtn").addEventListener("click", () => {
 function addFavorite() {
   alert("Added to favorites ❤️");
 }
+
+document.querySelectorAll(".download-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    const img = this.closest(".photo-card").querySelector("img");
+    const link = document.createElement("a");
+    link.href = img.src;
+    link.download = "image.jpg";
+    link.click();
+  });
+});
+
+// Favorite Toggle
+document.querySelectorAll(".fav-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    this.classList.toggle("active");
+  });
+});
