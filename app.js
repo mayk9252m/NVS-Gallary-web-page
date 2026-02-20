@@ -38,37 +38,37 @@ function openVideos() {
 //   link.click();
 // }
 
-function downloadImage(imagePath) {
-  const link = document.createElement("a");
-  link.href = imagePath;
-  link.download = imagePath.split("/").pop(); // original filename
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-document.getElementById("downloadBtn").addEventListener("click", () => {
-  downloadImage("/images/logo.png");
-});
-
-
-function addFavorite() {
-  alert("Added to favorites ❤️");
-}
-
 document.querySelectorAll(".download-btn").forEach(btn => {
   btn.addEventListener("click", function () {
     const img = this.closest(".photo-card").querySelector("img");
+    
     const link = document.createElement("a");
     link.href = img.src;
-    link.download = "image.jpg";
+    link.download = img.src.split("/").pop();
     link.click();
   });
 });
 
-// Favorite Toggle
-document.querySelectorAll(".fav-btn").forEach(btn => {
-  btn.addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
-});
+
+
+    // Function to handle the "Download All" action
+    function downloadAllFiles() {
+        const fileList = document.getElementById('file-list');
+        const links = fileList.querySelectorAll('a');
+
+        links.forEach(link => {
+            // Create a temporary anchor element and click it programmatically
+            const tempLink = document.createElement('a');
+            tempLink.href = link.href;
+            tempLink.download = link.download; // Use the filename from the original link
+            document.body.appendChild(tempLink);
+            tempLink.click();
+            document.body.removeChild(tempLink);
+        });
+    }
+
+    // Attach the downloadAllFiles function to the main button's click event
+    document.querySelector('.download-all-btn').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        downloadAllFiles();
+    });
