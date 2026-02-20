@@ -18,6 +18,10 @@ function openVishalgarhPhotos() {
   window.location.href = "/event/Vishalgarh-tour/photos.html";
 }
 
+function openAnnualDayPhotos() {
+  window.location.href = "/event/Annual Day/photos.html";
+}
+
 function openPhotos() {
   window.location.href = "/photos.html";
 }
